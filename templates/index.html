@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Парсер тинькофф индекс
+{% endblock %}
+
+{% block body %}
+<h1>Парсер тинькофф индекс</h1>
+
+<form method="post">
+    <input type="text" name="start_date" placeholder="start date (02.2020)">
+    <input type="text" name="end_date" placeholder="end date (06.2024)">
+    <button class="btn btn-success" type="submit">Скачать</button>
+</form>
+
+{% endblock %}
