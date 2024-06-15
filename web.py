@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, send_file
+from waitress import serve
 from parser_tinkoff import parser_tinkoff
 
 app = Flask(__name__)
@@ -14,4 +15,7 @@ def index():
         return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0")
+    # serve(app, port=5000)
+    # serve(app, host='0.0.0.0', port=5000, url_scheme='https')
+    # app.run(host="0.0.0.0", port=5000)
