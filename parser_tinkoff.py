@@ -22,4 +22,5 @@ def parser_tinkoff(start, end):
         writer = pd.ExcelWriter('tinkoff_index.xlsx', engine='openpyxl', if_sheet_exists='replace', mode='a')
 
         df.to_excel(writer, sheet_name=reg)
-        writer.save()
+        writer.close()
+        #writer.save()
