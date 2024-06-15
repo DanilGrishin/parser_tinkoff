@@ -23,5 +23,5 @@ def parser_tinkoff(start, end):
 
         df.to_excel(writer, sheet_name=reg)
 
-    writer.close()
+    # writer.close()
         #writer.save()
