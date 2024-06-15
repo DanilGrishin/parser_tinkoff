@@ -9,7 +9,7 @@ def parser_tinkoff(start, end):
                   'Республика Саха (Якутия)', 'Сахалинская область', 'Хабаровский край']
 
     writer = pd.ExcelWriter('tinkoff_index.xlsx', engine='openpyxl', if_sheet_exists='replace', mode='a')
-
+#
     for reg in regionName:
         print(reg)
 
