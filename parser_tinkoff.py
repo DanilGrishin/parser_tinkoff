@@ -8,6 +8,8 @@ def parser_tinkoff(start, end):
     regionName = ['all', 'Амурская область', 'Камчатский край', 'Приморский край',
                   'Республика Саха (Якутия)', 'Сахалинская область', 'Хабаровский край']
 
+    writer = pd.ExcelWriter('tinkoff_index.xlsx', engine='openpyxl', if_sheet_exists='replace', mode='a')
+
     for reg in regionName:
         print(reg)
 
@@ -19,8 +21,7 @@ def parser_tinkoff(start, end):
 
         # print(df)
 
-        writer = pd.ExcelWriter('tinkoff_index.xlsx', engine='openpyxl', if_sheet_exists='replace', mode='a')
-
         df.to_excel(writer, sheet_name=reg)
-        writer.close()
+
+    writer.close()
         #writer.save()
