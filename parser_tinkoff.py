@@ -29,7 +29,7 @@ def parser_tinkoff(start, end):
         #     # "http": http_proxy,
         #     "https": https_proxy
         # }
-
+#
         r = requests.get(url, headers=headers) # , proxies=proxyDict
 
         df = pd.DataFrame(r.json()['consumerTotalPoints'])
